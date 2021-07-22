@@ -1,35 +1,29 @@
-import api from "../utils/api";
-import React, { useEffect } from "react";
-import { logOut } from "../utils/session";
-import { useHistory } from "react-router-dom";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
-export default function Posts() {
-  const [posts, setPosts] = React.useState([]);
-  const history = useHistory();
+import Sidebar from "./Sidebar/Sidebar";
+import Posts from "./Posts";
+import "./Main.css";
 
-  useEffect(() => {
-    console.log("req.user");
-    api.axios
-      .get(`${api.apiUrl}/posts`)
-      .then((result) => setPosts(result.data))
-      .catch((err) => console.error(err));
-  }, []);
-
-  const handleLogout = () => {
-    logOut();
-    history.push("/login");
-  };
-
+export default function Main() {
   return (
-    <div>
-      <h3>Posts</h3>
-      {posts.map((post) => (
-        <>
-          <h4>{post.title}</h4>
-          <p>{post.content}</p>
-        </>
-      ))}
-      <button onClick={() => handleLogout()}>Logout</button>
+    <div className="Main">
+      <Sidebar />
+      <div className="Main-body">
+        <Router>
+          <Switch>
+            <Route exact path="/posts" component={Posts} />
+            <Route exact path="/">
+              <Redirect to="/posts" />
+            </Route>
+          </Switch>
+        </Router>
+      </div>
     </div>
   );
 }

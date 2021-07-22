@@ -36,7 +36,7 @@ function PrivateRoute({ component: Component, ...rest }) {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-body">
         <Router>
           <Switch>
             <Route exact path="/login" component={SignIn} />
