@@ -2,7 +2,7 @@
   width: 200px;
   min-height: 100vh;
   background-color: #1f2329;
-  font-size: calc(14px);
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,6 +10,7 @@
 
 .Sidebar-logo {
   padding: 8px;
+  margin-bottom: 16px;
 }
 
 .Sidebar-logo img {
@@ -20,7 +21,7 @@
   color: white;
   width: 100%;
   text-align: left;
-  height: 32px;
+  height: 56px;
   display: flex;
   align-items: center;
 }
@@ -48,7 +49,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 32px;
+  height: 56px;
 }
 
 .Sidebar-signout img {

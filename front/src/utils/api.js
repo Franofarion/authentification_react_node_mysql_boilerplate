@@ -5,7 +5,6 @@ const apiUrl = "http://localhost:3001";
 axios.interceptors.request.use(
   (config) => {
     const { origin } = new URL(config.url);
-    console.log("origin", origin);
     const allowedOrigins = [apiUrl];
     const token = Cookies.get("token");
     if (allowedOrigins.includes(origin)) {

@@ -14,7 +14,6 @@ export const getSession = () => {
   } catch (error) {
     console.log(error);
   }
-  console.log(session);
   return session;
 };
 

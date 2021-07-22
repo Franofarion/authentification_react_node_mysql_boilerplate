@@ -22,7 +22,6 @@ export default function Sidebar() {
     logOut();
     history.push("/login");
   };
-  console.log(location.pathname);
 
   return (
     <div className="Sidebar">
@@ -33,6 +32,7 @@ export default function Sidebar() {
         <div className="Sidebar-menu">
           {routes.map((route) => (
             <NavLink
+              key={route.redirect}
               className={`Sidebar-link ${
                 location.pathname === route.redirect
                   ? "Sidebar-link-active"

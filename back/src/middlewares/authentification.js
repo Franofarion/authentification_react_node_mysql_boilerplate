@@ -8,7 +8,6 @@ const checkAuthentification = async (req, res, next) => {
     try {
       const { user } = await jsonwebtoken.verify(token, JWT_PRIVATE_KEY);
       req.user = user;
-      console.log(req);
       return next();
     } catch (err) {
       return res.status(401).json({ message: 'Invalid user' });

@@ -1,0 +1,77 @@
+.PostList {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Post {
+  background: #fff;
+  width: 24em;
+  border-radius: 0.6em;
+  margin: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
+    0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  transition: all ease 200ms;
+}
+
+.Post:hover {
+  transform: scale(1.03);
+  box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12),
+    0 8px 32px -8px hsla(0, 0%, 0%, 0.14),
+    0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
+}
+
+.Post h2 {
+  color: #222;
+  margin-top: -0.2em;
+  line-height: 1.4;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  transition: all ease-in 100ms;
+}
+
+.Post p {
+  color: #777;
+}
+
+.Post h5 {
+  color: #bbb;
+  font-weight: 700;
+  font-size: 0.7em;
+  letter-spacing: 0.04em;
+  margin: 1.4em 0 0 0;
+  text-transform: uppercase;
+}
+
+.Post-body {
+  padding: 1.2em;
+}
+
+.Post-input {
+  background: white;
+  width: 100%;
+  margin-top: 16px;
+  border-radius: 4px;
+  border: 0;
+  color: #222222;
+  min-height: 48px;
+}
+
+.Post-submit {
+  justify-content: flex-end;
+  background-color: #f76c6c;
+  border: none;
+  width: 100px;
+  text-align: center;
+  padding: 14px;
+  border-radius: 4px;
+  color: white;
+}
+.Post-submit:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}

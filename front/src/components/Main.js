@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import Sidebar from "./Sidebar/Sidebar";
-import Posts from "./Posts";
+import Posts from "./posts/Posts";
 import "./Main.css";
 
 export default function Main() {
