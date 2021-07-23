@@ -2,9 +2,9 @@ const postRouter = require('express').Router();
 
 const { getAllPosts, createOnePost } = require('./post.controller');
 
-const {checkAuthentification} = require('../../middlewares/authentification');
+const { checkauthentication } = require('../../middlewares/authentication');
 
-postRouter.use(checkAuthentification)
+postRouter.use(checkauthentication);
 
 postRouter.get('/', getAllPosts);
 postRouter.post('/', createOnePost);

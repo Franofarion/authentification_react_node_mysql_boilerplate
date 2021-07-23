@@ -1,7 +1,7 @@
 const jsonwebtoken = require('jsonwebtoken');
 const JWT_PRIVATE_KEY = process.env.JWT_PRIVATE_KEY;
 
-const checkAuthentification = async (req, res, next) => {
+const checkauthentication = async (req, res, next) => {
   const bearer = req.get('authorization');
   const token = bearer.replace('Bearer ', '');
   if (typeof token !== 'undefined') {
@@ -17,5 +17,5 @@ const checkAuthentification = async (req, res, next) => {
 };
 
 module.exports = {
-  checkAuthentification,
+  checkauthentication,
 };
