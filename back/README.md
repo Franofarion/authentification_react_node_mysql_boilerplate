@@ -1,9 +1,9 @@
-### Serveur express & sequilize
+### Serveur express
 
 
 ## Before Starting the project 
 ```sql
-CREATE DATABASE sagacify;
+CREATE DATABASE test;
 ```
 
 ## Install it and run:
